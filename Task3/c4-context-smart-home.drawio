@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-03-19T00:00:00.000Z" agent="Mozilla/5.0" version="24.8.0">
+  <diagram id="task3-context" name="Task3 - C4 Context SmartHome">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Person -->
+        <mxCell id="p1" value="Собственник&#10;[Person]&#10;Использует мобильное приложение" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="120" width="190" height="170" as="geometry"/>
+        </mxCell>
+
+        <!-- System boundary (PropDevelopment) -->
+        <mxCell id="b1" value="PropDevelopment&#10;[Software System]" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;strokeColor=#666666;fillColor=none;fontSize=12;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="310" y="60" width="520" height="360" as="geometry"/>
+        </mxCell>
+
+        <!-- PropDevelopment main system box -->
+        <mxCell id="s1" value="Сервисы для собственников&#10;[Software System]&#10;ЛК: ЖКУ, ремонты, уведомления, (новое) умный дом" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;strokeColor=#0E7DAD;fontColor=#ffffff;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="350" y="130" width="440" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- External partner platform -->
+        <mxCell id="x1" value="Платформа партнёра «Умный дом»&#10;[Software System]&#10;Домофон (биометрия), шлагбаум (распознавание номеров)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;strokeColor=#736782;fontColor=#ffffff;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="140" width="260" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- External devices (optional) -->
+        <mxCell id="x2" value="Устройства&#10;Домофоны / Камеры / Шлагбаумы&#10;[Device/IoT]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;strokeColor=#736782;fontColor=#ffffff;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="880" y="320" width="260" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" value="Использует&#10;(HTTPS)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#555555;" edge="1" parent="1" source="p1" target="s1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e2" value="Интеграция&#10;(mTLS + OAuth2/OIDC)&#10;Команды/статусы/события" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#555555;" edge="1" parent="1" source="s1" target="x1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e3" value="Управляет устройствами&#10;(проприетарные протоколы)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#555555;" edge="1" parent="1" source="x1" target="x2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

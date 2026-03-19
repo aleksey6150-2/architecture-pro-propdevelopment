@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-03-19T00:00:00.000Z" agent="Mozilla/5.0" version="24.8.0">
+  <diagram id="task3-container" name="Task3 - Updated Container Diagram (SmartHome)">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Boundary -->
+        <mxCell id="bound" value="PropDevelopment&#10;[System Boundary]" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;strokeColor=#666666;fillColor=none;fontSize=12;align=left;verticalAlign=top;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="880" height="700" as="geometry"/>
+        </mxCell>
+
+        <!-- Person -->
+        <mxCell id="owner" value="Собственник&#10;[Person]" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="20" y="90" width="180" height="160" as="geometry"/>
+        </mxCell>
+
+        <!-- Existing containers (from your diagram, simplified) -->
+        <mxCell id="mobile" value="Витрина сервисов для собственников&#10;[Container: Mobile iOS/Android]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;strokeColor=#0E7DAD;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="240" y="90" width="280" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="tenantcore" value="tenant-core-app&#10;[Container: Kotlin/SpringBoot]&#10;Услуги собственникам" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;strokeColor=#0E7DAD;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="240" y="220" width="280" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="tenantdb" value="tenant-core-db&#10;[Container: PostgreSQL]" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#23A2D9;strokeColor=#0E7DAD;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="260" y="360" width="240" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- New SmartHome containers -->
+        <mxCell id="smgw" value="smart-home-gateway&#10;[Container: Kotlin/SpringBoot]&#10;Единая интеграция с партнёром:&#10;auth, tenant-изоляция, валидация, аудит" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ABC9C;strokeColor=#148F77;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="580" y="230" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="smdb" value="smart-home-db&#10;[Container: PostgreSQL]&#10;Связки deviceId↔buildingId↔tenantId, правила, согласия (без биошаблонов)" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#1ABC9C;strokeColor=#148F77;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="610" y="400" width="240" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- External partner -->
+        <mxCell id="partner" value="Платформа партнёра «Умный дом»&#10;[Software System]&#10;Домофон (биометрия) + Шлагбаум (LPR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;strokeColor=#736782;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="980" y="240" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- External systems from original landscape (optional anchors) -->
+        <mxCell id="uk" value="Поставщик ресурсов ЖКХ (УК)&#10;[External System]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;strokeColor=#736782;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="980" y="90" width="300" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e_owner_mobile" value="Использует&#10;HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#444444;" edge="1" parent="1" source="owner" target="mobile">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_mobile_tenant" value="API&#10;REST/WS + JWT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#444444;" edge="1" parent="1" source="mobile" target="tenantcore">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_tenant_db" value="JDBC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#444444;" edge="1" parent="1" source="tenantcore" target="tenantdb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_tenant_smgw" value="Команды/статусы умного дома&#10;REST (mTLS внутри контура)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2C3E50;" edge="1" parent="1" source="tenantcore" target="smgw">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_smgw_smdb" value="JDBC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2C3E50;" edge="1" parent="1" source="smgw" target="smdb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_smgw_partner" value="Интеграция&#10;mTLS + OAuth2 Client Credentials&#10;+ подписанные webhooks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2C3E50;" edge="1" parent="1" source="smgw" target="partner">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_tenant_uk" value="Счета/начисления&#10;REST (политики доступа обязательны)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#444444;" edge="1" parent="1" source="tenantcore" target="uk">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
