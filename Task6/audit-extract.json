@@ -1,0 +1,446 @@
+[
+  {
+    "type": "PRIVILEGED_POD",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Создание привилегированного пода",
+    "raw": "I0320 22:14:30.157876   29106 cli_runner.go:164] Run: docker run -d -t --privileged --security-opt seccomp=unconfined --tmpfs /tmp --tmpfs /run -v /lib/modules:/lib/modules:ro --hostname minikube --name minikube --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=minikube --label role.minikube.sigs.k8s.io= --label mode.minikube.sigs.k8s.io=minikube --network minikube --ip 192.168.49.2 --volume minikube:/var --security-opt apparmor=unconfined --memory=4096mb --memory-sw"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:30.396020   29106 cli_runner.go:164] Run: docker exec minikube stat /var/lib/dpkg/alternatives/iptables"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:30.705655   29106 kic_runner.go:114] Args: [docker exec --privileged minikube chown docker:docker /home/docker/.ssh/authorized_keys]"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:31.298852   29106 exec_runner.go:151] cp: /Users/jo/.minikube/certs/ca.pem --> /Users/jo/.minikube/ca.pem (1066 bytes)"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:31.300691   29106 exec_runner.go:151] cp: /Users/jo/.minikube/certs/cert.pem --> /Users/jo/.minikube/cert.pem (1111 bytes)"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:31.301955   29106 exec_runner.go:151] cp: /Users/jo/.minikube/certs/key.pem --> /Users/jo/.minikube/key.pem (1679 bytes)"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "# The base configuration already specifies an 'ExecStart=...' command. The first directive"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services."
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "ExecStart="
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 \\"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "ExecReload=/bin/kill -s HUP \\$MAINPID"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "# The base configuration already specifies an 'ExecStart=...' command. The first directive"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services."
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "ExecStart="
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 \t-H fd:// --containerd=/run/containerd/containerd.sock \t-H unix:///var/run/docker.sock \t--default-ulimit=nofile=1048576:1048576 \t--tlsverify \t--tlscacert /etc/docker/ca.pem \t--tlscert /etc/docker/server.pem \t--tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "ExecReload=/bin/kill -s HUP $MAINPID"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "-ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "-ExecReload=/bin/kill -s HUP $MAINPID"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "+# The base configuration already specifies an 'ExecStart=...' command. The first directive"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services."
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "+ExecStart="
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 \t-H fd:// --containerd=/run/containerd/containerd.sock \t-H unix:///var/run/docker.sock \t--default-ulimit=nofile=1048576:1048576 \t--tlsverify \t--tlscacert /etc/docker/ca.pem \t--tlscert /etc/docker/server.pem \t--tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "+ExecReload=/bin/kill -s HUP $MAINPID"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Executing: /lib/systemd/systemd-sysv-install enable docker"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:33.937416   29106 ssh_runner.go:195] Run: sudo find /etc/cni/net.d -maxdepth 1 -type f -name *loopback.conf* -not -name *.mk_disabled -exec sh -c \"grep -q loopback {} && ( grep -q name {} || sudo sed -i '/\"type\": \"loopback\"/i \\ \\ \\ \\ \"name\": \"loopback\",' {} ) && sudo sed -i 's|\"cniVersion\": \".*\"|\"cniVersion\": \"1.0.0\"|g' {}\" ;"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:33.950899   29106 ssh_runner.go:195] Run: sudo find /etc/cni/net.d -maxdepth 1 -type f ( ( -name *bridge* -or -name *podman* ) -and -not -name *.mk_disabled ) -printf \"%p, \" -exec sh -c \"sudo mv {} {}.mk_disabled\" ;"
+  },
+  {
+    "type": "PRIVILEGED_POD",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Создание привилегированного пода",
+    "raw": "I0320 22:14:34.001338   29106 ssh_runner.go:195] Run: sh -c \"sudo sed -i -r 's|^( *)\\[plugins.\"io.containerd.grpc.v1.cri\"\\]|&\\n\\1  enable_unprivileged_ports = true|' /etc/containerd/config.toml\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:35.761729   29106 cli_runner.go:164] Run: docker exec -t minikube dig +short host.docker.internal"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "ExecStart="
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "ExecStart=/var/lib/minikube/binaries/v1.28.0/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --config=/var/lib/kubelet/config.yaml --eviction-hard=memory.available<100Mi --hostname-override=minikube --housekeeping-interval=10s --kubeconfig=/etc/kubernetes/kubelet.conf --node-ip=192.168.49.2"
+  },
+  {
+    "type": "RISKY_ROLEBINDING",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Создание RoleBinding с cluster-admin",
+    "raw": "I0320 22:14:43.759988   29106 ssh_runner.go:195] Run: sudo /var/lib/minikube/binaries/v1.28.0/kubectl create clusterrolebinding minikube-rbac --clusterrole=cluster-admin --serviceaccount=kube-system:default --kubeconfig=/var/lib/minikube/kubeconfig"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:24:21 minikube dockerd[1108]: time=\"2026-03-20T19:24:21.705011466Z\" level=error msg=\"Error running exec 857570494a01690d03f6ea1c1bc996a096f80dc90bcf3fe0d6c24732bcaed686 in container: OCI runtime exec failed: exec failed: unable to start container process: exec: \\\"cat\\\": executable file not found in $PATH: unknown\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:34:21 minikube dockerd[1108]: time=\"2026-03-20T19:34:21.528425340Z\" level=error msg=\"Error running exec e784fded8282f0a133ac6a219da54b88aba2fa070a15cdb844677e335154a28a in container: OCI runtime exec failed: exec failed: unable to start container process: exec: \\\"cat\\\": executable file not found in $PATH: unknown\""
+  },
+  {
+    "type": "POD_CREATED",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Создание пода",
+    "raw": "CONTAINER           IMAGE                                                                            CREATED             STATE               NAME                      ATTEMPT             POD ID              POD"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 19:14:56.539872       1 taint_manager.go:206] \"Starting NoExecuteTaintManager\""
+  },
+  {
+    "type": "POD_CREATED",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Создание пода",
+    "raw": "I0320 19:14:57.395423       1 event.go:307] \"Event occurred\" object=\"kube-system/kube-proxy\" fieldPath=\"\" kind=\"DaemonSet\" apiVersion=\"apps/v1\" type=\"Normal\" reason=\"SuccessfulCreate\" message=\"Created pod: kube-proxy-x9djb\""
+  },
+  {
+    "type": "POD_CREATED",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Создание пода",
+    "raw": "I0320 19:14:57.591791       1 event.go:307] \"Event occurred\" object=\"kube-system/coredns-5dd5756b68\" fieldPath=\"\" kind=\"ReplicaSet\" apiVersion=\"apps/v1\" type=\"Normal\" reason=\"SuccessfulCreate\" message=\"Created pod: coredns-5dd5756b68-jgtjr\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763184    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"k8s-certs\\\" (UniqueName: \\\"kubernetes.io/host-path/bc76b9e8dea2945526c0860fc5741521-k8s-certs\\\") pod \\\"kube-apiserver-minikube\\\" (UID: \\\"bc76b9e8dea2945526c0860fc5741521\\\") \" pod=\"kube-system/kube-apiserver-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763205    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"usr-share-ca-certificates\\\" (UniqueName: \\\"kubernetes.io/host-path/bc76b9e8dea2945526c0860fc5741521-usr-share-ca-certificates\\\") pod \\\"kube-apiserver-minikube\\\" (UID: \\\"bc76b9e8dea2945526c0860fc5741521\\\") \" pod=\"kube-system/kube-apiserver-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763218    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"etc-ca-certificates\\\" (UniqueName: \\\"kubernetes.io/host-path/5c323cdcfe0ccd6089f1b75c3ad2e51a-etc-ca-certificates\\\") pod \\\"kube-controller-manager-minikube\\\" (UID: \\\"5c323cdcfe0ccd6089f1b75c3ad2e51a\\\") \" pod=\"kube-system/kube-controller-manager-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763234    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"flexvolume-dir\\\" (UniqueName: \\\"kubernetes.io/host-path/5c323cdcfe0ccd6089f1b75c3ad2e51a-flexvolume-dir\\\") pod \\\"kube-controller-manager-minikube\\\" (UID: \\\"5c323cdcfe0ccd6089f1b75c3ad2e51a\\\") \" pod=\"kube-system/kube-controller-manager-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763250    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"kubeconfig\\\" (UniqueName: \\\"kubernetes.io/host-path/5c323cdcfe0ccd6089f1b75c3ad2e51a-kubeconfig\\\") pod \\\"kube-controller-manager-minikube\\\" (UID: \\\"5c323cdcfe0ccd6089f1b75c3ad2e51a\\\") \" pod=\"kube-system/kube-controller-manager-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763262    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"etcd-certs\\\" (UniqueName: \\\"kubernetes.io/host-path/9aac5b5c8815def09a2ef9e37b89da55-etcd-certs\\\") pod \\\"etcd-minikube\\\" (UID: \\\"9aac5b5c8815def09a2ef9e37b89da55\\\") \" pod=\"kube-system/etcd-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763274    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"ca-certs\\\" (UniqueName: \\\"kubernetes.io/host-path/bc76b9e8dea2945526c0860fc5741521-ca-certs\\\") pod \\\"kube-apiserver-minikube\\\" (UID: \\\"bc76b9e8dea2945526c0860fc5741521\\\") \" pod=\"kube-system/kube-apiserver-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763297    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"k8s-certs\\\" (UniqueName: \\\"kubernetes.io/host-path/5c323cdcfe0ccd6089f1b75c3ad2e51a-k8s-certs\\\") pod \\\"kube-controller-manager-minikube\\\" (UID: \\\"5c323cdcfe0ccd6089f1b75c3ad2e51a\\\") \" pod=\"kube-system/kube-controller-manager-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763309    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"kubeconfig\\\" (UniqueName: \\\"kubernetes.io/host-path/c6bc3f6bf412e669f9bba774348555df-kubeconfig\\\") pod \\\"kube-scheduler-minikube\\\" (UID: \\\"c6bc3f6bf412e669f9bba774348555df\\\") \" pod=\"kube-system/kube-scheduler-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763322    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"usr-local-share-ca-certificates\\\" (UniqueName: \\\"kubernetes.io/host-path/bc76b9e8dea2945526c0860fc5741521-usr-local-share-ca-certificates\\\") pod \\\"kube-apiserver-minikube\\\" (UID: \\\"bc76b9e8dea2945526c0860fc5741521\\\") \" pod=\"kube-system/kube-apiserver-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763336    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"usr-local-share-ca-certificates\\\" (UniqueName: \\\"kubernetes.io/host-path/5c323cdcfe0ccd6089f1b75c3ad2e51a-usr-local-share-ca-certificates\\\") pod \\\"kube-controller-manager-minikube\\\" (UID: \\\"5c323cdcfe0ccd6089f1b75c3ad2e51a\\\") \" pod=\"kube-system/kube-controller-manager-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763347    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"etcd-data\\\" (UniqueName: \\\"kubernetes.io/host-path/9aac5b5c8815def09a2ef9e37b89da55-etcd-data\\\") pod \\\"etcd-minikube\\\" (UID: \\\"9aac5b5c8815def09a2ef9e37b89da55\\\") \" pod=\"kube-system/etcd-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:43 minikube kubelet[2327]: I0320 19:14:43.763369    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"ca-certs\\\" (UniqueName: \\\"kubernetes.io/host-path/5c323cdcfe0ccd6089f1b75c3ad2e51a-ca-certs\\\") pod \\\"kube-controller-manager-minikube\\\" (UID: \\\"5c323cdcfe0ccd6089f1b75c3ad2e51a\\\") \" pod=\"kube-system/kube-controller-manager-minikube\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:56 minikube kubelet[2327]: I0320 19:14:56.565222    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"kube-api-access-j7v7q\\\" (UniqueName: \\\"kubernetes.io/projected/98f37175-5f7b-4a4e-b298-90465d52dcd1-kube-api-access-j7v7q\\\") pod \\\"storage-provisioner\\\" (UID: \\\"98f37175-5f7b-4a4e-b298-90465d52dcd1\\\") \" pod=\"kube-system/storage-provisioner\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:56 minikube kubelet[2327]: I0320 19:14:56.565267    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"tmp\\\" (UniqueName: \\\"kubernetes.io/host-path/98f37175-5f7b-4a4e-b298-90465d52dcd1-tmp\\\") pod \\\"storage-provisioner\\\" (UID: \\\"98f37175-5f7b-4a4e-b298-90465d52dcd1\\\") \" pod=\"kube-system/storage-provisioner\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:57 minikube kubelet[2327]: I0320 19:14:57.473761    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"kube-proxy\\\" (UniqueName: \\\"kubernetes.io/configmap/83502317-ec9c-4d83-be4d-5367c9d8995e-kube-proxy\\\") pod \\\"kube-proxy-x9djb\\\" (UID: \\\"83502317-ec9c-4d83-be4d-5367c9d8995e\\\") \" pod=\"kube-system/kube-proxy-x9djb\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:57 minikube kubelet[2327]: I0320 19:14:57.473788    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"kube-api-access-78s4l\\\" (UniqueName: \\\"kubernetes.io/projected/83502317-ec9c-4d83-be4d-5367c9d8995e-kube-api-access-78s4l\\\") pod \\\"kube-proxy-x9djb\\\" (UID: \\\"83502317-ec9c-4d83-be4d-5367c9d8995e\\\") \" pod=\"kube-system/kube-proxy-x9djb\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:57 minikube kubelet[2327]: I0320 19:14:57.473800    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"xtables-lock\\\" (UniqueName: \\\"kubernetes.io/host-path/83502317-ec9c-4d83-be4d-5367c9d8995e-xtables-lock\\\") pod \\\"kube-proxy-x9djb\\\" (UID: \\\"83502317-ec9c-4d83-be4d-5367c9d8995e\\\") \" pod=\"kube-system/kube-proxy-x9djb\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:57 minikube kubelet[2327]: I0320 19:14:57.473820    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"lib-modules\\\" (UniqueName: \\\"kubernetes.io/host-path/83502317-ec9c-4d83-be4d-5367c9d8995e-lib-modules\\\") pod \\\"kube-proxy-x9djb\\\" (UID: \\\"83502317-ec9c-4d83-be4d-5367c9d8995e\\\") \" pod=\"kube-system/kube-proxy-x9djb\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:57 minikube kubelet[2327]: I0320 19:14:57.778489    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"config-volume\\\" (UniqueName: \\\"kubernetes.io/configmap/e44dfe5c-3978-4fa5-9a75-7d865d1f28f2-config-volume\\\") pod \\\"coredns-5dd5756b68-jgtjr\\\" (UID: \\\"e44dfe5c-3978-4fa5-9a75-7d865d1f28f2\\\") \" pod=\"kube-system/coredns-5dd5756b68-jgtjr\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:14:57 minikube kubelet[2327]: I0320 19:14:57.778515    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"kube-api-access-gvhcg\\\" (UniqueName: \\\"kubernetes.io/projected/e44dfe5c-3978-4fa5-9a75-7d865d1f28f2-kube-api-access-gvhcg\\\") pod \\\"coredns-5dd5756b68-jgtjr\\\" (UID: \\\"e44dfe5c-3978-4fa5-9a75-7d865d1f28f2\\\") \" pod=\"kube-system/coredns-5dd5756b68-jgtjr\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:24:21 minikube kubelet[2327]: I0320 19:24:21.395385    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"kube-api-access-2qkhp\\\" (UniqueName: \\\"kubernetes.io/projected/47482ad3-d63e-4a06-b01a-913d1cf5c2c2-kube-api-access-2qkhp\\\") pod \\\"attacker-pod\\\" (UID: \\\"47482ad3-d63e-4a06-b01a-913d1cf5c2c2\\\") \" pod=\"secure-ops/attacker-pod\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/minikube-full.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:24:21 minikube kubelet[2327]: I0320 19:24:21.596737    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"kube-api-access-9sczc\\\" (UniqueName: \\\"kubernetes.io/projected/682b4a70-2d78-47b8-982d-dc5ca1b17b7a-kube-api-access-9sczc\\\") pod \\\"privileged-pod\\\" (UID: \\\"682b4a70-2d78-47b8-982d-dc5ca1b17b7a\\\") \" pod=\"secure-ops/privileged-pod\""
+  },
+  {
+    "type": "PRIVILEGED_POD",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Создание привилегированного пода",
+    "raw": "I0320 22:14:30.157876   29106 cli_runner.go:164] Run: docker run -d -t --privileged --security-opt seccomp=unconfined --tmpfs /tmp --tmpfs /run -v /lib/modules:/lib/modules:ro --hostname minikube --name minikube --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=minikube --label role.minikube.sigs.k8s.io= --label mode.minikube.sigs.k8s.io=minikube --network minikube --ip 192.168.49.2 --volume minikube:/var --security-opt apparmor=unconfined --memory=4096mb --memory-sw"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:30.396020   29106 cli_runner.go:164] Run: docker exec minikube stat /var/lib/dpkg/alternatives/iptables"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:30.705655   29106 kic_runner.go:114] Args: [docker exec --privileged minikube chown docker:docker /home/docker/.ssh/authorized_keys]"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:31.298852   29106 exec_runner.go:151] cp: /Users/jo/.minikube/certs/ca.pem --> /Users/jo/.minikube/ca.pem (1066 bytes)"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:31.300691   29106 exec_runner.go:151] cp: /Users/jo/.minikube/certs/cert.pem --> /Users/jo/.minikube/cert.pem (1111 bytes)"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:31.301955   29106 exec_runner.go:151] cp: /Users/jo/.minikube/certs/key.pem --> /Users/jo/.minikube/key.pem (1679 bytes)"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:33.937416   29106 ssh_runner.go:195] Run: sudo find /etc/cni/net.d -maxdepth 1 -type f -name *loopback.conf* -not -name *.mk_disabled -exec sh -c \"grep -q loopback {} && ( grep -q name {} || sudo sed -i '/\"type\": \"loopback\"/i \\ \\ \\ \\ \"name\": \"loopback\",' {} ) && sudo sed -i 's|\"cniVersion\": \".*\"|\"cniVersion\": \"1.0.0\"|g' {}\" ;"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:33.950899   29106 ssh_runner.go:195] Run: sudo find /etc/cni/net.d -maxdepth 1 -type f ( ( -name *bridge* -or -name *podman* ) -and -not -name *.mk_disabled ) -printf \"%p, \" -exec sh -c \"sudo mv {} {}.mk_disabled\" ;"
+  },
+  {
+    "type": "PRIVILEGED_POD",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Создание привилегированного пода",
+    "raw": "I0320 22:14:34.001338   29106 ssh_runner.go:195] Run: sh -c \"sudo sed -i -r 's|^( *)\\[plugins.\"io.containerd.grpc.v1.cri\"\\]|&\\n\\1  enable_unprivileged_ports = true|' /etc/containerd/config.toml\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Выполнение команды в поде",
+    "raw": "I0320 22:14:35.761729   29106 cli_runner.go:164] Run: docker exec -t minikube dig +short host.docker.internal"
+  },
+  {
+    "type": "RISKY_ROLEBINDING",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Создание RoleBinding с cluster-admin",
+    "raw": "I0320 22:14:43.759988   29106 ssh_runner.go:195] Run: sudo /var/lib/minikube/binaries/v1.28.0/kubectl create clusterrolebinding minikube-rbac --clusterrole=cluster-admin --serviceaccount=kube-system:default --kubeconfig=/var/lib/minikube/kubeconfig"
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:24:21 minikube dockerd[1108]: time=\"2026-03-20T19:24:21.705011466Z\" level=error msg=\"Error running exec 857570494a01690d03f6ea1c1bc996a096f80dc90bcf3fe0d6c24732bcaed686 in container: OCI runtime exec failed: exec failed: unable to start container process: exec: \\\"cat\\\": executable file not found in $PATH: unknown\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:34:21 minikube dockerd[1108]: time=\"2026-03-20T19:34:21.528425340Z\" level=error msg=\"Error running exec e784fded8282f0a133ac6a219da54b88aba2fa070a15cdb844677e335154a28a in container: OCI runtime exec failed: exec failed: unable to start container process: exec: \\\"cat\\\": executable file not found in $PATH: unknown\""
+  },
+  {
+    "type": "EXEC_OPERATION",
+    "source": "/Users/jo/audit-events.log",
+    "description": "Выполнение команды в поде",
+    "raw": "Mar 20 19:24:21 minikube kubelet[2327]: I0320 19:24:21.596737    2327 reconciler_common.go:258] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"kube-api-access-9sczc\\\" (UniqueName: \\\"kubernetes.io/projected/682b4a70-2d78-47b8-982d-dc5ca1b17b7a-kube-api-access-9sczc\\\") pod \\\"privileged-pod\\\" (UID: \\\"682b4a70-2d78-47b8-982d-dc5ca1b17b7a\\\") \" pod=\"secure-ops/privileged-pod\""
+  }
+]
